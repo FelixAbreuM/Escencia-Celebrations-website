@@ -1,0 +1,38 @@
+/* Footer layout and business contact links. */
+
+/* Footer branding and business contact links. */
+
+.site-footer {
+  padding:23px 0;
+  background:#e7ece6;
+  color:#56695b;
+  font-size:11px;
+}
+
+.footer-row {
+  gap:15px;
+}
+
+.footer-brand {
+  color:var(--forest);
+  font:17px var(--serif);
+  text-decoration:none;
+}
+
+.footer-contact {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+}
+
+.footer-contact a {
+  text-underline-offset:3px;
+}
+
+/* Aligns footer content with the centered sections above it. */
+.site-footer > .container {
+  width:90%;
+  max-width:1260px;
+  padding-inline:0;
+}

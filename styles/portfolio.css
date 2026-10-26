@@ -1,0 +1,182 @@
+/* Portfolio category selection and responsive photo gallery. */
+
+/* Portfolio category cards and the selected-category state. */
+
+.category-grid {
+  margin-bottom:28px;
+}
+
+.category-card {
+  padding:0;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:6px;
+  background:#fff;
+  text-align:left;
+  color:var(--ink);
+  cursor:pointer;
+  transition:transform .18s,border-color .18s,background .18s;
+}
+
+.category-card:hover {
+  transform:translateY(-2px);
+  border-color:#b5c3b5;
+}
+
+.category-card.is-active {
+  border:2px solid var(--leaf);
+  background:#f3f6f1;
+}
+
+.category-image {
+  display:block;
+  height:192px;
+  overflow:hidden;
+  background:#e4e9e1;
+}
+
+.category-image img {
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  transition:transform .3s;
+}
+
+.category-card:hover .category-image img {
+  transform:scale(1.035);
+}
+
+.category-meta {
+  min-height:67px;
+  padding:12px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.category-meta strong {
+  font:400 21px var(--serif);
+  color:var(--forest);
+}
+
+.category-meta span {
+  color:var(--muted);
+  font-size:10px;
+  white-space:nowrap;
+}
+
+.category-meta b {
+  margin-left:4px;
+  color:var(--leaf);
+  font-size:18px;
+  font-weight:400;
+  vertical-align:-1px;
+}
+
+/* Gallery title, description, count, and responsive photo grid. */
+
+.gallery-heading {
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:16px;
+  padding:0 2px;
+}
+
+.gallery-heading h2 {
+  margin:0 0 4px;
+  color:var(--forest);
+  font:400 25px var(--serif);
+}
+
+.gallery-heading p {
+  margin:0;
+  color:var(--muted);
+  font-size:11px;
+}
+
+.gallery-count {
+  color:var(--leaf);
+  font-size:11px;
+  white-space:nowrap;
+}
+
+.gallery-item {
+  margin:0;
+  overflow:hidden;
+  border-radius:4px;
+  background:#f7f5ef;
+}
+
+.gallery-item img {
+  display:block;
+  width:100%;
+  height:235px;
+  object-fit:cover;
+}
+
+.gallery-item figcaption {
+  padding:10px 12px 11px;
+  color:#637066;
+  font-size:11px;
+}
+
+/* Indicates gallery photos are interactive and styles the enlarged photo view. */
+.gallery-item img {
+  cursor:zoom-in;
+}
+
+.gallery-item img:focus-visible {
+  outline:3px solid var(--leaf);
+  outline-offset:3px;
+}
+
+.gallery-lightbox-image {
+  display:block;
+  width:100%;
+  max-height:calc(100vh - 7rem);
+  border-radius:4px;
+  object-fit:contain;
+}
+
+.gallery-lightbox-close {
+  position:absolute;
+  z-index:1;
+  top:12px;
+  right:12px;
+  padding:10px;
+  background-color:rgba(0,0,0,.55);
+  opacity:1;
+}
+
+.gallery-lightbox-caption {
+  margin:0;
+  padding:10px 12px;
+  color:#fff;
+  text-align:center;
+  font-size:12px;
+}
+
+/* Matches the centered Garden Romance content width and gallery panel treatment. */
+.portfolio.container {
+  width:90%;
+  max-width:1260px;
+  padding-inline:0;
+}
+
+.gallery-panel {
+  padding:25px;
+  border-radius:6px;
+  background:#f7f5ef;
+}
+
+.gallery-heading {
+  margin-bottom:18px;
+}
+
+.gallery-item {
+  background:#fff;
+}

@@ -1,0 +1,177 @@
+/* Service-area banner, responsive navigation, and Garden Romance hero. */
+
+/* Service-area banner above the main navigation. */
+.service-line {
+  padding:9px 18px;
+  background:#eef2ed;
+  color:#4d6555;
+  font-size:12px;
+  letter-spacing:.045em;
+  text-align:center;
+}
+
+/* Brand, logo, and navigation links. */
+.site-header {
+  min-height:86px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  min-width:220px;
+  text-decoration:none;
+}
+
+.brand img {
+  width:55px;
+  height:58px;
+  object-fit:contain;
+}
+
+.brand-text {
+  color:var(--forest);
+  font:20px/1.1 var(--serif);
+}
+
+.brand-text small {
+  display:block;
+  margin-top:5px;
+  color:var(--leaf);
+  font:9px var(--sans);
+  letter-spacing:.28em;
+  text-transform:uppercase;
+}
+
+.main-nav {
+  gap:28px;
+}
+
+.main-nav > a:not(.button) {
+  color:#56675c;
+  font-size:12px;
+  text-decoration:none;
+}
+
+.main-nav > a:not(.button):hover {
+  color:var(--leaf);
+}
+
+/* Side-by-side introduction and featured portfolio photo. */
+.hero.container.row {
+  width:90%;
+  max-width:1260px;
+  min-height:420px;
+  margin:0 auto;
+  padding:0;
+  overflow:hidden;
+  border-radius:5px;
+  background:var(--leaf-light);
+}
+
+.hero-copy {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding:54px 8% 50px 11%;
+}
+
+.hero .eyebrow {
+  margin:0 0 19px;
+  color:var(--leaf);
+  font-size:10px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.hero-description {
+  max-width:415px;
+  margin:0 0 25px;
+  color:#475e50;
+  font:20px/1.6 var(--serif);
+}
+
+.button-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.hero-image {
+  position:relative;
+  min-height:420px;
+}
+
+.hero-image img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 55%;
+}
+
+/* Shows the Bootstrap collapsed navigation after a visitor opens it. */
+.main-nav.show {
+  display:flex;
+}
+
+@media (max-width: 991.98px) {
+  .hero.container.row {
+    width:90%;
+  }
+
+  .hero-image {
+    min-height:250px;
+  }
+
+  .hero-copy {
+    padding:36px 7%;
+  }
+}
+/* Blends the featured photo into the Garden Romance hero background. */
+.hero-image::after {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,var(--leaf-light) 0%,rgba(232,238,231,.72) 18%,rgba(232,238,231,0) 55%);
+  content:"";
+  pointer-events:none;
+}
+
+@media (max-width: 991.98px) {
+  .hero-image::after {
+    background:linear-gradient(180deg,rgba(232,238,231,0) 55%,var(--leaf-light) 100%);
+  }
+}
+
+/* Keeps the primary and secondary hero actions side by side. */
+.button-row {
+  flex-wrap:nowrap;
+  width:100%;
+}
+
+.button-row .button {
+  flex:1 1 0;
+  min-width:0;
+  padding-inline:clamp(8px,1.5vw,19px);
+  text-align:center;
+  font-size:11px;
+}
+
+/* Keeps each hero action label on one line, favoring the longer quote label. */
+.button-row .button {
+  flex:1 1 0;
+  white-space:nowrap;
+  padding-inline:clamp(4px,1vw,12px);
+  font-size:clamp(9px,1vw,11px);
+  letter-spacing:0;
+}
+
+.button-row .button:nth-child(2) {
+  flex-grow:1.2;
+}
